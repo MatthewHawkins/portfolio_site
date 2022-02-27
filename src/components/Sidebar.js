@@ -94,6 +94,7 @@ function Sidebar(props) {
                 color: #109DDD;
             }
         }
+        text-decoration: none;
     `;
     
     const menuIconStyles = css`
@@ -115,6 +116,9 @@ function Sidebar(props) {
         margin-left: 20px;
         margin-right: 20px;
         font-size: .85em;
+        a{
+            color: white;
+        }
     `;
 
     return (
@@ -124,38 +128,38 @@ function Sidebar(props) {
                 <p css={titleStyles}>Matthew Hawkins</p>
                 <div css={iconContainerStyles}>
                     <div css={iconStyles}>
-                        <FacebookIcon style={{color: "white"}} />
+                        <a href='https://www.facebook.com/matthew.hawkins.121' target="_blank"><FacebookIcon style={{color: "white"}} /></a>
                     </div>
                     <div css={iconStyles}>
-                        <InstagramIcon  style={{color: "white"}} />
+                        <a href='https://www.instagram.com/mhawkins1115/' target="_blank"><InstagramIcon  style={{color: "white"}} /></a>
                     </div>
                     <div css={iconStyles}>
-                        <LinkedInIcon  style={{color: "white"}} />
+                        <a href='https://www.linkedin.com/in/matthew-hawkins-4272001a1/' target="_blank"><LinkedInIcon  style={{color: "white"}} /></a>
                     </div>
                     <div css={iconStyles}>
-                        <GitHubIcon  style={{color: "white"}} />
+                        <a href='https://github.com/MatthewHawkins' target="_blank"><GitHubIcon  style={{color: "white"}} /></a>
                     </div>
                 </div>
             </div>
             <ul css={menuStyles}>
-                <div css={menuItemStyles}>
+                <a href='#home' css={menuItemStyles}>
                     <HomeOutlinedIcon className='icon' css={menuIconStyles} fontSize="large" sx={{ color: grey[500] }} />
                     <li css={menuTextStyles}>Home</li>
-                </div>
-                <div css={menuItemStyles}>
+                </a>
+                <a href='#about' css={menuItemStyles}>
                     <PersonOutlineOutlinedIcon className='icon' css={menuIconStyles} fontSize="large" sx={{ color: grey[500] }} />
                     <li css={menuTextStyles}>About</li>
-                </div>
-                <div css={menuItemStyles}>
+                </a>
+                <a href='#resume' css={menuItemStyles}>
                     <FeedOutlinedIcon className='icon' css={menuIconStyles} fontSize="large" sx={{ color: grey[500] }} />
                     <li css={menuTextStyles}>Resume</li>
-                </div>
-                <div css={menuItemStyles}>
+                </a>
+                <a href='#contact' css={menuItemStyles}>
                     <EmailOutlinedIcon className='icon' css={menuIconStyles} fontSize="large" sx={{ color: grey[500] }} />
                     <li css={menuTextStyles}>Contact</li>
-                </div>
+                </a>
             </ul>
-            <p css={footerStyles}>Powered by React, styled with Emotion, source code on Github</p>
+            <p css={footerStyles}>Powered by <a href='https://reactjs.org/'>React</a><br></br> Styled with <a href='https://emotion.sh/docs/introduction'>Emotion</a><br></br>Source code on <a href="https://github.com/MatthewHawkins/portfolio_site">Github</a></p>
         </div>
     );
 }

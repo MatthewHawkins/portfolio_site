@@ -173,7 +173,7 @@ function About(props) {
 
 
     return (
-        <div css={bodyStyles}>
+        <div id='about' css={bodyStyles}>
             <div css={leftStyles}>
                 <div css={imageBackgroundStyles}></div>
                 <div css={imageContainerStyles}>
@@ -197,7 +197,7 @@ function About(props) {
                         Outside of work and school, I enjoy exploring the Pacific Northwest (even when it's raining),  
                         staying active, and playing music, and planning my next trip to a new place.
                     </p>
-                    <div css={resumeContainerStyles} >
+                    <div id='resume' css={resumeContainerStyles} >
                         <img src={img2} css={resumePreviewStyles}></img>
                         <div css={resumeTextContainerStyles}>
                             <h4 css={resumeTitleStyles} >Resume</h4>

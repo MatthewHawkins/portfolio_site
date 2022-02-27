@@ -133,7 +133,7 @@ function Intro(props) {
     `;
 
     return (
-        <div css={bodyStyles}>
+        <div id='home' css={bodyStyles}>
             <div css={leftStyles}>
                 <div css={leftWrapperStyles}>
                     <h2 css={introStyles} >Hello, my name is </h2>

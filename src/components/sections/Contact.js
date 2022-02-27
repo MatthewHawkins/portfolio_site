@@ -176,7 +176,7 @@ function Contact(props) {
     `;
 
     return (
-        <div css={bodyStyles}>
+        <div id='contact' css={bodyStyles}>
             <div css={contactBackgroundStyles}></div>
             <div css={contactWrapperStyles}>
                 <div css={leftStyles}>
