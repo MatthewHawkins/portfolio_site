@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e4889cbf.css",
+    "main.js": "/static/js/main.de3684e9.js",
+    "static/media/0001.jpg": "/static/media/0001.29b9ce48108f8cd75535.jpg",
+    "static/media/Updated_Resume.pdf": "/static/media/Updated_Resume.6c0ae74409b3455e57e2.pdf",
+    "static/media/OSU_Weatherford_3.jpg": "/static/media/OSU_Weatherford_3.a364a07ae4ce6e770158.jpg",
+    "static/media/headshot_3.png": "/static/media/headshot_3.819769150a5c7233d71f.png",
+    "static/media/discord_logo.png": "/static/media/discord_logo.b5bd52432116402ed0c7.png",
+    "static/media/email_logo.png": "/static/media/email_logo.a49e015815e3ac6d2bd3.png",
+    "static/media/phone_logo.png": "/static/media/phone_logo.d90a6d23cf5129d853bb.png",
+    "index.html": "/index.html",
+    "main.e4889cbf.css.map": "/static/css/main.e4889cbf.css.map",
+    "main.de3684e9.js.map": "/static/js/main.de3684e9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e4889cbf.css",
+    "static/js/main.de3684e9.js"
+  ]
+}
