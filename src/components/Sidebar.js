@@ -27,6 +27,10 @@ function Sidebar(props) {
         background-color: rgb(4,11,20);
         height: 100vh;
         width: 300px;
+
+        @media screen and (max-width: 480px) {
+            display: none;
+        }
     `;
 
     const headerStyles = css`

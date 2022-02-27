@@ -12,6 +12,10 @@ function Intro(props) {
         display: flex;
         height: 100vh;
         font-family: 'Titillium Web', sans-serif;
+
+        @media screen and (max-width: 480px) {
+            flex-direction: column;
+        }
     `;
 
     const leftStyles = css`
@@ -27,6 +31,14 @@ function Intro(props) {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+        @media screen and (max-width: 480px) {
+            padding: 10px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 100%;
+        }
     `;
 
     const introStyles = css`
@@ -70,11 +82,15 @@ function Intro(props) {
         align-items: center;
         font-size: 2em;
         font-weight: bold;
-        color: green;
+        color: #41bf63;
         height: 50px;
     `;
 
     const descriptionStyles = css`
+
+        @media screen and (max-width: 480px) {
+           display: none;
+        }
 
     `;
 
@@ -88,6 +104,10 @@ function Intro(props) {
         flex: 1;
         position: relative;
         justify-content: end;
+
+        @media screen and (max-width: 480px) {
+            display: none;
+        }
     `;
 
     const imageStyles = css`
@@ -122,12 +142,12 @@ function Intro(props) {
                         <div css={titleAnimationStyles}>
                             <div css={titleItemStyles}>Web Developer</div>
                             <div css={titleItemStyles}>UI/UX Designer</div>
-                            <div css={titleItemStyles}>OSU Alum</div>
+                            <div css={titleItemStyles}>OSU Student</div>
                             <div css={titleItemStyles}>Teacher</div>
                             <div css={titleItemStyles}>Musician</div>
                         </div>
                     </div>
-                    <p>
+                    <p css={descriptionStyles}>
                     I'm a fourth-year computer science student at Oregon State University 
                     specializing in application development and computer science education.
                     </p>

@@ -4,8 +4,11 @@ import React from 'react';
 
 import { css, keyframes } from '@emotion/react';
 
+import AnimatedButton from '../AnimatedButton';
+
 import img1 from '../../images/OSU_Weatherford_3.jpg'
 import img2 from '../../images/0001.jpg'
+import resume from '../../images/Updated_Resume.pdf'
 
 
 
@@ -16,6 +19,13 @@ function About(props) {
         height: 100vh;
         align-items: center;
         font-family: 'Titillium Web', sans-serif;
+        position: relative;
+
+        @media screen and (max-width:480px) {
+            flex-direction: column;
+            text-align: center;
+            margin-top: 50px;
+        }
     `;
 
     const leftStyles = css`
@@ -25,6 +35,10 @@ function About(props) {
         flex: 1;
         position: relative;
         height: 100%;
+
+        @media screen and (max-width:480px) {
+            width: 100%;
+        }
 
     `;
 
@@ -37,6 +51,10 @@ function About(props) {
         height: 60vh;
         border-radius: 30px;
 
+        @media screen and (max-width:480px) {
+            display: none;
+        }
+
     
     `;
 
@@ -44,31 +62,61 @@ function About(props) {
         width: 50%;
         height: 60vh;
         position: relative;
-        `;
 
-const imageStyles = css`
+        @media screen and (max-width:480px) {
+            display: flex;
+            justify-content: end;
+            margin-top: 100px;
+            height: 30vh;
+        }
+    `;
+
+    const imageStyles = css`
         width: 100%;
         height: 100%;
         margin-left: -80px;
         margin-top: -60px;
         border-radius: 30px;
         object-fit: cover;
+
+        @media screen and (max-width:480px) {
+            margin-left: 0px;
+            margin-top: -100px;
+        }
     `;
+
+
+
+
+
 
 
     const rightStyles = css`
         display: flex;
         flex-direction: column;
         align-items: left;
-        justify-content: left;
-        height: 60%;
+        justify-content: center;
+        height: 100%;
         flex: 1;
         position: relative;
+
+        @media screen and (max-width:480px) {
+            margin-top: -150px;
+            padding: 20px;
+        }        
+    `;
+
+
+    const aboutWrapperStyles = css`
+        height: 70%;
     `;
 
     const aboutTitleStyles = css`
         margin-bottom: 50px;
         font-weight: bold;
+        @media screen and (max-width:480px) {
+            display: none;
+        } 
     `;
 
     const aboutTextStyles = css`
@@ -86,6 +134,7 @@ const imageStyles = css`
         width: 120px;
         height: 120px;
         border: 1px solid lightgrey;
+        margin-top: 20px;
     `;
 
     const resumeTextContainerStyles = css`
@@ -93,6 +142,7 @@ const imageStyles = css`
         flex-direction: column;
         justify-content: center;
         width: 75%;
+        margin-top: 20px;
     `;
 
     const resumeTitleStyles = css`
@@ -100,8 +150,11 @@ const imageStyles = css`
         color: gray;
     `;
 
-    const resumeDescriptionStyles = css`
-
+    const buttonStyles = css`
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        margin-left: -20%;
     `;
 
 
@@ -112,6 +165,10 @@ const imageStyles = css`
         height: 30px;
         position: absolute;
         bottom: 20px;
+
+        @media screen and (max-width:480px) {
+            display: none;
+        } 
     `;
 
 
@@ -127,23 +184,28 @@ const imageStyles = css`
                 </div>
             </div>
             <div css={rightStyles}>
-                <h1 css={aboutTitleStyles} > About Me</h1>
-                <p css={aboutTextStyles} >
-                    Currently, I'm finishing up school and working as a TA and undergraduate research 
-                    assistant. As a TA, I teach labs and create instructional material for introductory collegiate CS
-                    courses. When not studying or teaching directly, I work with a computer science education research 
-                    team headed by Jennifer Parham-Mocello, focusing on creation and implementation of middle school 
-                    computer science curriculum. 
-                </p>
-                <p css={aboutTextStyles} >
-                    Outside of work and school, I enjoy exploring the Pacific Northwest (even when it's raining),  
-                    staying active, and playing music, and planning my next trip to a new place.
-                </p>
-                <div css={resumeContainerStyles} >
-                    <img src={img2} css={resumePreviewStyles}></img>
-                    <div css={resumeTextContainerStyles}>
-                        <h4 css={resumeTitleStyles} >Resume</h4>
-                        <p css={resumeDescriptionStyles} >For a more in-depth set of job descriptions, language proficiencies and educational qualifications, feel free to download my resume! </p>
+                <div css={aboutWrapperStyles}>
+                    <h1 css={aboutTitleStyles} > About Me</h1>
+                    <p css={aboutTextStyles} >
+                        Currently, I'm finishing up school and working as a TA and undergraduate research 
+                        assistant. As a TA, I teach labs and create instructional material for introductory collegiate CS
+                        courses. When not studying or teaching directly, I work with a computer science education research 
+                        team headed by Jennifer Parham-Mocello, focusing on creation and implementation of middle school 
+                        computer science curriculum. 
+                    </p>
+                    <p css={aboutTextStyles} >
+                        Outside of work and school, I enjoy exploring the Pacific Northwest (even when it's raining),  
+                        staying active, and playing music, and planning my next trip to a new place.
+                    </p>
+                    <div css={resumeContainerStyles} >
+                        <img src={img2} css={resumePreviewStyles}></img>
+                        <div css={resumeTextContainerStyles}>
+                            <h4 css={resumeTitleStyles} >Resume</h4>
+                            <p>For a more in-depth set of job descriptions, language proficiencies and educational qualifications, feel free to download my resume! </p>
+                            <a href={resume} download css={buttonStyles}>
+                                <AnimatedButton text='DOWNLOAD'  />
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <svg css={scrollStyles}
